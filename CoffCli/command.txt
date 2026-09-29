@@ -1,0 +1,4 @@
+dotnet publish -c Release --self-contained true -p:PublishSingleFile=true
+dotnet pack -c Release -o ./dist
+dotnet tool install --add-source ./dist coffcli --tool-path ~/.local/bin
+dotnet tool update --global --add-source ./dist coffcli
